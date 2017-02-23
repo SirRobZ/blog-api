@@ -53,7 +53,7 @@ router.put('/:id', jsonParser, (req, res) => {
 		author: req.body.author,
 		id: req.params.id
 	});
-	res.status(204).json(updatedItem);
+	res.status(201).json(updatedItem);
 });
 
 router.delete('/:id', (req, res) => {
