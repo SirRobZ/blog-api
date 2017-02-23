@@ -20,7 +20,7 @@ router.post('/', jsonParser, (req, res) => {
 			return res.status(400).send(message);
 		}
 	}
-	res.status(201).json(BlogPosts.create(req.body.title, req.body.content, req.body.author));
+	res.status(201).json(BlogPosts.create(req.body.title, req.body.content, req.body.author, req.body.publishDate));
 });
 
 router.get('/', (req, res) => {
