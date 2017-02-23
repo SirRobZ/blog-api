@@ -1,0 +1,9 @@
+language: node_js
+node_js: node
+deploy:
+  provider: heroku
+  api_key:
+    secure: dIMVe9t9stQGHhJfx5swEhPiw/sqgOvUNM2SfrIbMmUbmTBnaJ9J3K2qxR+eO23L05eOwC/BSXTJRTQ3NnOGy6sX3tiFarHt+nnv3kaoOuEKpI6+mYMUzbJn2wfyg0RiJ5DHzQ1+mcoB2+OsHh+v68o+ZJM6lZK9aHwGitPAxOCx6S3TPWa162KkMl1tZo374pcdDNygPt0i8iLRcDW4uGfNsq7JAUlsuv/7hcJCGbz/o3UP1qiLfDRbz1CJptwYaF27NwMxhAp9+Ayl3nlMomK5ta3gh2Xsow4gfO6VhVo5XTnHLj1uoEjK0aHXAVtMGbQq4yTiVxoIWDGnRdWKLfOQWWYWTANeY4n3WYPDfwnPbUk635uX/gUx53LVHBSPbvjS+EEDgqAaV7D09LJd7ePKr8YVpSjsNK5giRK4fdoRRyT9B7YQL/lD4cBm/4F6GYV9OWx4u8slWDZbk/f4r0W8Nrdai+9jzr2uJO7m1RnmLRtAaxmoPGRddEtU/st+5UzAvrXmJhivz8N9EwyUgVANb4Z4R/zcUOpwf/my82Fv2xvVgiE64rhnGoffQB82ECJRKllX7/YwzjJsvq4LJzEouEjLFSre3NZivqsukzN4ZU7mj/ghF8MFbxdhuwu4avuqNVS8cAtkFu7XU/USDIJG8yUXf4DTqb8fNKfY37E=
+  app: afternoon-oasis-20388
+  on:
+    repo: SirRobZ/blog-api
