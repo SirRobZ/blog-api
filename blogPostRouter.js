@@ -10,7 +10,7 @@ BlogPosts.create('First Post', 'This is the first post', 'Saurabh');
 BlogPosts.create('Second Post', 'This is the Second post', 'Saurabh');
 BlogPosts.create('Third Post', 'This is the Third post', 'Saurabh');
 
-router.post('/blog-posts', jsonParser, (req, res) => {
+router.post('/', jsonParser, (req, res) => {
 	const requiredFields = ['title', 'content', 'author'];
 	for (let i=0; i<requiredFields.length; i++) {
 		const field = requiredFields[i];
@@ -21,17 +21,17 @@ router.post('/blog-posts', jsonParser, (req, res) => {
 		}
 	}
 	res.status(201).json(BlogPosts.create(req.body.title, req.body.content, req.body.author));
-})
+});
 
-router.get('/blog-posts', (req, res) => {
+router.get('/', (req, res) => {
 	res.json(BlogPosts.get());
-})
+});
 
-router.get('/blog-posts/:id', (req, res) => {
+router.get('/:id', (req, res) => {
 	res.json(BlogPosts.get(req.params.id));
-})
+});
 
-router.put('/blog-posts/:id', jsonParser, (req, res) => {
+router.put('/:id', jsonParser, (req, res) => {
 	const requiredFields = ['id', 'title', 'content', 'author', 'publishDate'];
 	for (let i=0; i<requiredFields.length; i++) {
 		const field = requiredFields[i];
@@ -56,11 +56,11 @@ router.put('/blog-posts/:id', jsonParser, (req, res) => {
 	res.status(204).json(updatedItem);
 });
 
-router.delete('/blog-posts/:id', (req, res) => {
+router.delete('/:id', (req, res) => {
 	BlogPosts.delete(req.params.id);
 	console.log(`Deleted blog post item \`${req.params.id})\``);
 	res.status(204).end();
-})
+});
 
 
 module.exports = router;

@@ -6,7 +6,7 @@ const app = express();
 
 app.use(morgan('common'));
 
-app.use('.blog-posts', './blogPostRouter');
+app.use('/blog-posts', blogPostRouter);
 
 
 
